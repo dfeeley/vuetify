@@ -66,7 +66,7 @@ function searchTableItems (
     // We only need a single column to match the search term to be included in the results.
     const matchesSearchTerm = !search || headersWithoutCustomFilters.some(filterFn(item, search, customFilter))
 
-    return matchesColumnFilters && matchesSearchTerm
+    return matchesColumnFilters || matchesSearchTerm
   })
 }
 
